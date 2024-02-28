@@ -266,6 +266,13 @@ async function load_model_debug(){
 async function run_demo(){
 	
 	console.log("run_demo");
+    const footer = document.querySelector('.footer');
+
+    if (footer) {
+        footer.style.marginTop = '1350px';
+    } else {
+        console.error('Element with class .footer not found.');
+    }
 	
 	var imgElement = new Image();
 	imgElement.onload = () => {
